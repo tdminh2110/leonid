@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= pageTitle %></title>
+    <link rel="stylesheet" href="/css/common/w3.css">
+    <link rel="stylesheet" href="/css/login/main.css">        
+</head>
+<body>
+    <main>
+        <div class="w3-card-4 w3-border w3-border-teal">
+            <div class="w3-container w3-teal">
+                <h2>Login Form</h2>
+            </div>
+
+            <form class="w3-container" action="/login" method="POST">
+                <div class="m-row">
+                    <label>Email</label>
+                    <input class="w3-input w3-border" type="text" name="email" id="email">
+                </div>
+                <div class="m-row">
+                    <label>Password</label>
+                    <input class="w3-input w3-border" type="password" name="password" id="password">                
+                </div>
+                <div class="m-row" style="margin-top:35px">                                    
+                    <button class="w3-button w3-large w3-border w3-border-teal" type="submit">Log in</button>
+                    <label class="container">Remember me
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </form> 
+        </div>
+    </main>
+</body>
+</html>

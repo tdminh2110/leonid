@@ -1,0 +1,36 @@
+<%- include('includes/head.ejs') %>
+
+    <script src="https://cdn.jsdelivr.net/npm/peerjs@0.3.20/dist/peer.min.js"></script>
+    <script src="../socket.io/socket.io.js"></script>    
+</head>
+<body>
+    <%- include('includes/navigation.ejs') %>
+    <main>
+        <div class="main-title">Room of Patient</div>
+        
+        <div class="mainscreen">
+            <div id="MainScreenVideo">
+                <video id="clinicianStream" width="600px"></video>
+            </div>
+            <div id="MainScreenGame">                    
+            </div>
+        </div>
+        </br></br>        
+
+        <h7 id="showinfo">Hello</h7></br>
+        <button id="record">Start Record</button>
+        <button id="stoprecord">Stop Record</button>
+        <button id="download">Download</button> 
+        <button id="upload">Upload</button></br></br>
+
+        <a href="/logout">Logout</a>
+    </main>
+</body>
+
+<script type="text/javascript"> 
+    var myEmail = '<%= locals.email %>'; 
+</script>
+<script src="../js/init_patient.js"></script>
+<script src="../js/socket_patient.js"></script>
+<script src="../js/webrtc_patient.js"></script>
+</html>

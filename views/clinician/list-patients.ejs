@@ -1,0 +1,52 @@
+<%- include('includes/head.ejs') %>
+</head>
+<body>
+    <%- include('includes/navigation.ejs') %>
+    <main>
+        <div class="main-title">List of Patients</div>
+
+        <div class="table">            
+            <div class="table-heading">
+                <div class="table-cell">
+                    <p>Full Name</p>
+                </div>
+                <div class="table-cell">
+                    <p>Birthday</p>
+                </div>
+                <div class="table-cell">
+                    <p>Phone</p>
+                </div>                
+                <div class="table-cell">
+                    <p>Email</p>
+                </div>
+                <div class="table-cell">
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+            
+            <% for (let pati of patis) { %>
+            <div class="table-row">
+                <div class="table-cell">
+                    <p><%= pati.DSUserName %> <%= pati.family_name %></p>
+                </div>
+                <div class="table-cell" style="text-align:center">
+                    <p><%= pati.birthday %></p>
+                </div>
+                <div class="table-cell" style="text-align:center">
+                    <p><%= pati.phone %></p>
+                </div>                
+                <div class="table-cell">
+                    <p><%= pati.email %></p>
+                </div>
+                <div class="table-cell" style="text-align:center">
+                    <p>Edit Delete</p>
+                </div>
+            </div>
+            <% } %>         
+        </div>
+
+
+        <a href="/logout">Logout</a>
+    </main>
+</body>
+</html>

@@ -1,0 +1,25 @@
+.table
+{   
+    display: table;    
+    margin: 1em auto;
+    width: 90%;
+}
+.table-heading
+{
+    display: table-row;
+    font-weight: bold;
+    text-align: center;
+    background-color: #AAAAAA;    
+}
+.table-row
+{
+    display: table-row;
+}
+.table-cell
+{
+    display: table-cell;
+    border: solid;
+    border-width: thin;
+    padding-left: 5px;
+    padding-right: 5px;
+}

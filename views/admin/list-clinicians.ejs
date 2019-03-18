@@ -1,0 +1,35 @@
+<%- include('includes/head.ejs') %>
+</head>
+<body>
+    <%- include('includes/navigation.ejs') %>
+    <main>
+        <div class="w3-container">
+            <h1 class="w3-text-green w3-center" style="text-shadow:1px 1px 0 #444">List of Clinicians</h1>
+        </div>
+        <table class="w3-table-all">
+            <thead>
+              <tr class="w3-dark-gray">
+                <th>Full Name</th>
+                <th>Birthday</th>
+                <th>Phone</th>
+                <th>Function</th>
+                <th>Establishment</th>
+                <th>Email</th>
+                <th>&nbsp;</th>
+              </tr>
+            </thead>
+            <% for (let clin of clins) { %>
+            <tr>
+                <td><%= clin.DSUserName %> <%= clin.family_name %></td>
+                <td><%= clin.birthday %></td>
+                <td><%= clin.phone %></td>
+                <td><%= clin.DSFunctionName %></td>
+                <td><%= clin.DSEstablishmentName %></td>
+                <td><%= clin.email %></td>
+                <td><img src="/images/icons/edit.png" alt="Edit" height="16" width="16">&nbsp;&nbsp;<img src="/images/icons/delete.png" alt="Remove" height="16" width="16"></td>
+            </tr>
+                <% } %>             
+          </table>
+    </main>
+</body>
+<%- include('includes/end.ejs') %>

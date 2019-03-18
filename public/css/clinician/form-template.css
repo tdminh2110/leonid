@@ -1,0 +1,56 @@
+.main-title {
+    text-align: center;
+    display: block;
+    font-size: 150%;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.form-standard {
+    width: 30rem;
+    max-width: 90%;
+    margin: auto;
+    display: block;
+}
+
+.form-control {
+    margin: 1rem 0;
+  }
+  
+.form-control label,
+.form-control input,
+.form-control select {
+display: block;
+width: 100%;
+margin-bottom: 0.25rem;
+}
+
+.form-control input, 
+.form-control select {
+border: 1px solid #a1a1a1;
+font: inherit;
+border-radius: 2px;
+}
+
+.form-control input:focus,
+.form-control select:focus {
+outline-color: #00695c;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.25rem 1rem;
+    text-decoration: none;
+    font: inherit;
+    border: 1px solid #00695c;
+    color: #00695c;
+    background: white;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .btn:hover,
+  .btn:active {
+    background-color: #00695c;
+    color: white;
+  }

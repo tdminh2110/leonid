@@ -1,0 +1,42 @@
+<%- include('includes/head.ejs') %>
+
+    <script src="https://cdn.jsdelivr.net/npm/peerjs@0.3.20/dist/peer.min.js"></script>
+    <script src="../socket.io/socket.io.js"></script>
+</head>
+<body>
+    <%- include('includes/navigation.ejs') %>
+    <main>
+        <div class="main-title">Room of Clinician</div>
+        
+        <div class="row">
+            <div class="column" id="MainNavigator" style="width:30%;height:800px">
+                <p><button id="Test1" class="w3-button w3-green w3-round-xxlarge">Test 1</button></p>
+                <p><button id="Test2" class="w3-button w3-green w3-round-xxlarge">Test 2</button></p>
+                <p><button id="Test3" class="w3-button w3-green w3-round-xxlarge">Test 3</button></p>
+            </div>
+            <div class="column" style="width:50%;height:800px">
+                <div id="MainScreenVideo">
+                    <video id="LargeStream" width="800"></video> </br> </br>
+                </div>
+                <div id="MainScreenGame">                    
+                </div>                
+            </div>
+            <div class="column" style="width:20%;height:800px">
+                <video id="SmallStream" width="300"></video>
+            </div>
+        </div>
+
+        <a href="/logout">Logout</a>
+    </main>
+</body>
+
+<script type="text/javascript"> 
+    var myEmail = '<%= locals.email %>'; 
+</script>
+<script src="../js/init_clinician.js"></script>
+<script src="../js/socket_clinician.js"></script>
+<script src="../js/webrtc_clinician.js"></script>
+<script src="../js/interaction/game01.js"></script>
+<script src="../js/interaction/game02.js"></script>
+<script src="../js/interaction/game03.js"></script>
+</html>
