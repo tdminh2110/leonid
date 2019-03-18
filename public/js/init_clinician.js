@@ -1,4 +1,4 @@
-const socket = io("https://cursa:8080");
+const socket = io("https://deepspa-leonid.herokuapp.com/");
 
 const peer = new Peer();
 
